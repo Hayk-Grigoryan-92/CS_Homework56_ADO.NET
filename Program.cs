@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -181,7 +179,7 @@ namespace ConsoleApp1
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "Delete * from Members where Id = @Id";
+                    command.CommandText = "Delete from Members where Id = @Id";
                     command.Parameters.Add(new SqlParameter("@Id", id));
                     command.ExecuteNonQuery();
                 }
@@ -287,7 +285,7 @@ namespace ConsoleApp1
                 using (SqlCommand command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "Delete * from University where Id = @Id";
+                    command.CommandText = "Delete from University where Id = @Id";
                     command.Parameters.Add(new SqlParameter("@Id", id));
                     command.ExecuteNonQuery();
                 }
